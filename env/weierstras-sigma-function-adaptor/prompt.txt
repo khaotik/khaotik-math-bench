@@ -1,0 +1,12 @@
+In `flint` library, the `flint.acb.elliptic_sigma` function takes `z` and`tau` argument, we need a Python wrapper function called `sigmag2g3` to match Mathematica's
+`WeierstrassSigma[z, {g2,g3}]` style arguments. Example script @example-mma-script.wl and @example-py-script.py are provided as a starting point.
+
+Work the problem out step by step:
+  0. Make sure the environment is properly setup by running the both Python script and Mathematica script.
+  1. Work out python function `sigma_by_lattice(z:acb, w1:acb, w3:acb)` where `w1` and `w3` are lattice half periods. This should match Mathematica's `WeierstrassSigma[z, WeierstrassHalfPeriods[w1, w3]]`
+  2. Work out python function `elliptic_g2g3_to_half_periods(g2:acb, g3:acb)`. Thiss should match Mathematica's `WeierstrassHalfPeriods`
+  3. Compose result from step 1 and 2 to obtain the required python function `sigmag2g3`
+
+Things to take care:
+  1. All implemented functions should work with arbitrary precision. Any constant used in the wrapper function shall be computed to the desired precision
+  2. Feel free to implement helper functions, testers, call `wolframscript` and other required tools as you work out the problem.
