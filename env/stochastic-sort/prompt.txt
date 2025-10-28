@@ -1,0 +1,7 @@
+Design an algorithm to solve the probabilistic sorting problem.
+There are $n$ real numbers $x_1, x_2, \dots x_n$. However they act like black boxes that we cannot know their exact value.
+The only thing we can observe is a probabilistic compare function on a pair of these numbers $c(x_i, x_j) \to {-1, 1}$.
+This $c(x_i, x_j)$ works as follows, it give value 1 at probability $\sigma(x_j - x_i)$ and -1 otherwise. $\sigma(x) = \frac{1}{1 + e^{-x}}$ is the sigmoid function.
+We know a prior that all the $n$ real numbers are sampled from i.i.d standard normal distribution.
+Develop the probabilistic sorting algorithm having 95% chance of correctly sorting the $n$ real numbers while attempting to minimize amount of calls to $c(x_i, x_j)$.
+Once done, implement the algorithm in `my_solution` function in `solution.py` file. You should read `solution.py` file for interface details. 
