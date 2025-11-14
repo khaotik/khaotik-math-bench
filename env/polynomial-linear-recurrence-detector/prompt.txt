@@ -1,0 +1,3 @@
+Let $P_{m,n}(z) = Res_x(x^n-1, x^m-x+z)$ where $Res_x$ denotes polynomial resultant with respect to $x$.
+Experiments has shown that $P_{m,n}$ satisfies a linear recurrence of order $2^m$ with respect to $n$, when $m$ is fixed.
+Derive and implement an efficient algorithm to find this recurrence relation given $m$.
