@@ -10,3 +10,4 @@ Work the problem out step by step:
 Things to take care:
   1. All implemented functions should work with arbitrary precision. Any constant used in the wrapper function shall be computed to the desired precision
   2. Feel free to implement helper functions, testers, call `wolframscript` and other required tools as you work out the problem.
+  3. The implementation should be in Python. The only non-built-in library allowed to use is `flint`. Workarounds such as using `subprocess` to call Mathematica from Python is not allowed.
